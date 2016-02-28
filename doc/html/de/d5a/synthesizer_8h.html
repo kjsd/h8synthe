@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>H8Synthe: src/synthesizer.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">H8Synthe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>総合概要</span></a></li>
+      <li><a href="../../annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="../../files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="../../globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('de/d5a/synthesizer_8h.html','../../');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a>  </div>
+  <div class="headertitle">
+<div class="title">synthesizer.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>シンセサイザー  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;h8sdk/stddef.h&gt;</code><br />
+<code>#include &lt;h8sdk/ioctl.h&gt;</code><br />
+<code>#include &lt;h8sdk/led.h&gt;</code><br />
+<code>#include &lt;h8sdk/lcd.h&gt;</code><br />
+<code>#include &lt;h8sdk/adc.h&gt;</code><br />
+<code>#include &lt;h8sdk/ps2.h&gt;</code><br />
+<code>#include &lt;h8sdk/kbd_jp106.h&gt;</code><br />
+<code>#include &lt;h8sdk/sound.h&gt;</code><br />
+<code>#include &lt;h8sdk/music.h&gt;</code><br />
+<code>#include &lt;h8sdk/envelope.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/de0/key__image_8h_source.html">key_image.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+synthesizer.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/dbc/synthesizer_8h__incl.png" border="0" usemap="#src_2synthesizer_8h" alt=""/></div>
+<map name="src_2synthesizer_8h" id="src_2synthesizer_8h">
+<area shape="rect" id="node12" href="../../d1/de0/key__image_8h.html" title="鍵盤画像データ " alt="" coords="259,80,357,107"/>
+</map>
+</div>
+</div>
+<p><a href="../../de/d5a/synthesizer_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:db/d8e/structKeyParam__"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d5a/synthesizer_8h.html#db/d8e/structKeyParam__">KeyParam_</a></td></tr>
+<tr class="memdesc:db/d8e/structKeyParam__"><td class="mdescLeft">&#160;</td><td class="mdescRight">鍵盤パラメータ型  <a href="../../de/d5a/synthesizer_8h.html#db/d8e/structKeyParam__">[詳解]</a><br /></td></tr>
+<tr class="separator:db/d8e/structKeyParam__"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:aa49d37848f9e48ae5be1e7e87d2abcc3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d5a/synthesizer_8h_aa49d37848f9e48ae5be1e7e87d2abcc3.html#aa49d37848f9e48ae5be1e7e87d2abcc3">NUM_OF_BANK_</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:aa49d37848f9e48ae5be1e7e87d2abcc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーボードバンクの数  <a href="../../de/d5a/synthesizer_8h_aa49d37848f9e48ae5be1e7e87d2abcc3.html#aa49d37848f9e48ae5be1e7e87d2abcc3">[詳解]</a><br /></td></tr>
+<tr class="separator:aa49d37848f9e48ae5be1e7e87d2abcc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19965f59d417acca89a01d9063731c50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d5a/synthesizer_8h_a19965f59d417acca89a01d9063731c50.html#a19965f59d417acca89a01d9063731c50">KEY_OF_BANK_</a>&#160;&#160;&#160;29</td></tr>
+<tr class="memdesc:a19965f59d417acca89a01d9063731c50"><td class="mdescLeft">&#160;</td><td class="mdescRight">バンク当たりの鍵盤数。2オクターブ分  <a href="../../de/d5a/synthesizer_8h_a19965f59d417acca89a01d9063731c50.html#a19965f59d417acca89a01d9063731c50">[詳解]</a><br /></td></tr>
+<tr class="separator:a19965f59d417acca89a01d9063731c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>シンセサイザー </p>
+<p> 
+@version $Id:$
+
+@author Kenji MINOURA / kenji@kandj.org
+
+Copyright (c) 2008 K&J Software Design, Ltd All rights reserved.
+ </p>
+
+<p> <a class="el" href="../../de/d5a/synthesizer_8h_source.html">synthesizer.h</a> に定義があります。</p>
+</div><hr/><h2 class="groupheader">クラス詳解</h2>
+<a name="db/d8e/structKeyParam__" id="db/d8e/structKeyParam__"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct KeyParam_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>鍵盤パラメータ型 </p>
+
+<p> <a class="el" href="../../de/d5a/synthesizer_8h_source.html">synthesizer.h</a> の <a class="el" href="../../de/d5a/synthesizer_8h_source.html#l00060">60</a> 行目に定義があります。</p>
+</div><div class="dynheader">
+KeyParam_ 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d6a/structKeyParam____coll__graph.png" border="0" usemap="#KeyParam___coll__map" alt="Collaboration graph"/></div>
+</div>
+<table class="fieldtable">
+<tr><th colspan="3">クラスメンバ</th></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="aee8e36a4a011ca2f16a1a0a1516177b8"></a>_UBYTE</td>
+<td class="fieldname">
+key</td>
+<td class="fielddoc">
+PS/2キーコード </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a9b51a65e62e596a079f5b200691cf94a"></a>_UBYTE</td>
+<td class="fieldname">
+freq</td>
+<td class="fielddoc">
+音階 </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a08775d991d20219f3056ae8e0cb6caf7"></a>_UBYTE</td>
+<td class="fieldname">
+freq_other</td>
+<td class="fielddoc">
+freqに対する半音上の音階 </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a2e4c7a16f352538a2fdb4f57936fe221"></a><a class="el" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cc">KEY_IMG_Type</a></td>
+<td class="fieldname">
+break_ch</td>
+<td class="fielddoc">
+鍵盤を離しているときのLCD文字コード </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="aab13bbb06742a3558c2047a514e1c6cf"></a><a class="el" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cc">KEY_IMG_Type</a></td>
+<td class="fieldname">
+make_ch</td>
+<td class="fielddoc">
+鍵盤を押しているときのLCD文字コード </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ad82ec53dd29248caebeb83963d51a51a"></a><a class="el" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cc">KEY_IMG_Type</a></td>
+<td class="fieldname">
+make_other_ch</td>
+<td class="fielddoc">
+freq_otherの鍵盤を押しているときのLCD文字コード </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a884f9d4a3e53da8107c46d8894f37d75"></a>_SINT</td>
+<td class="fieldname">
+lcd_x</td>
+<td class="fielddoc">
+鍵盤キャラクタのLCD表示位置。横 </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a6d6cf94e828c520b3bab9eb0e580c5b4"></a>_SINT</td>
+<td class="fieldname">
+lcd_y</td>
+<td class="fielddoc">
+鍵盤キャラクタのLCD表示位置。縦 </td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../de/d5a/synthesizer_8h.html">synthesizer.h</a></li>
+    <li class="footer">2016年02月28日(日) 17時30分12秒作成 - H8Synthe / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

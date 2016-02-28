@@ -1,0 +1,10 @@
+-cpu=300HN
+-include="C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\..\..\..\h8sdk\include"
+-define=USE_MUSIC_RECORD
+-object="C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\Debug\key_image.obj"
+-debug
+-nolist
+-chgincpath
+"C:\cygwin\home\minoru\work\synthesizer\src\key_image.c"
+-lang=c
+-nologo

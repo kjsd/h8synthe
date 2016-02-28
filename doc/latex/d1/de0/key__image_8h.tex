@@ -1,0 +1,140 @@
+\subsection{src/key\+\_\+image.h ファイル}
+\label{key__image_8h}\index{src/key\+\_\+image.\+h@{src/key\+\_\+image.\+h}}
+
+
+鍵盤画像データ  
+
+
+{\ttfamily \#include $<$h8sdk/stddef.\+h$>$}\\*
+{\ttfamily \#include $<$h8sdk/lcd.\+h$>$}\\*
+key\+\_\+image.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{d4/dd0/key__image_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{dc/d38/key__image_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{key__image_8h_a6e24b4d8bd16a740050b1d5acfd8a6f1_a6e24b4d8bd16a740050b1d5acfd8a6f1}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+K\+E\+Y}~7
+\begin{DoxyCompactList}\small\item\em 1オクターブを表現するキー画像の数 \end{DoxyCompactList}\item 
+\#define \hyperlink{key__image_8h_aea98fd836762cd2c34fa327510a54e57_aea98fd836762cd2c34fa327510a54e57}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+F\+U\+L\+L}~0xff
+\begin{DoxyCompactList}\small\item\em 黒塗り画像の文字コード \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160cc}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+Type} \{ \\*
+\hyperlink{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160ccafdd55dc0589b955d47a363b82940cd1f}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K} = 0, 
+\\*
+\hyperlink{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160cca5898c2d59feac4d1e467b5a83e34ad50}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K\+\_\+\+M\+A\+K\+E\+W}, 
+\\*
+\hyperlink{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160ccaa729252488723c3e63c6786c44c6f5d9}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K\+\_\+\+M\+A\+K\+E\+B}, 
+\\*
+\hyperlink{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160cca7ab4f53a7298030a3cfcefeca83e5305}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+W\+H\+I\+T\+E}, 
+\\*
+\hyperlink{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160ccab5fb40b7e7e274990691f53fff111986}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}
+ \}\begin{DoxyCompactList}\small\item\em キー画像の種類 \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+const \+\_\+\+U\+B\+Y\+T\+E \hyperlink{key__image_8h_aac267b2e32d4518bd2661895e8667365_aac267b2e32d4518bd2661895e8667365}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame} \mbox{[}\hyperlink{key__image_8h_a6e24b4d8bd16a740050b1d5acfd8a6f1_a6e24b4d8bd16a740050b1d5acfd8a6f1}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+K\+E\+Y}\mbox{]}
+\begin{DoxyCompactList}\small\item\em 1オクターブ分の\+L\+C\+D文字コード列 \end{DoxyCompactList}\item 
+const \+\_\+\+U\+B\+Y\+T\+E \hyperlink{key__image_8h_ad8bcb9deb96dec3ecacf43106f0f845d_ad8bcb9deb96dec3ecacf43106f0f845d}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char} \mbox{[}\hyperlink{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160ccab5fb40b7e7e274990691f53fff111986}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}\mbox{]}\mbox{[}L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+S\mbox{]}
+\begin{DoxyCompactList}\small\item\em キー画像種別分のキャラクタ画像ビットマップ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+鍵盤画像データ 
+
+ 
+
+\subsubsection{マクロ定義詳解}
+\index{key\+\_\+image.\+h@{key\+\_\+image.\+h}!K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+K\+E\+Y@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+K\+E\+Y}}
+\index{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+K\+E\+Y@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+K\+E\+Y}!key\+\_\+image.\+h@{key\+\_\+image.\+h}}
+\paragraph[{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+K\+E\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+K\+E\+Y~7}\label{key__image_8h_a6e24b4d8bd16a740050b1d5acfd8a6f1_a6e24b4d8bd16a740050b1d5acfd8a6f1}
+
+
+1オクターブを表現するキー画像の数 
+
+
+
+ key\+\_\+image.\+h の 26 行目に定義があります。
+
+\index{key\+\_\+image.\+h@{key\+\_\+image.\+h}!K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+F\+U\+L\+L@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+F\+U\+L\+L}}
+\index{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+F\+U\+L\+L@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+F\+U\+L\+L}!key\+\_\+image.\+h@{key\+\_\+image.\+h}}
+\paragraph[{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+F\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+F\+U\+L\+L~0xff}\label{key__image_8h_aea98fd836762cd2c34fa327510a54e57_aea98fd836762cd2c34fa327510a54e57}
+
+
+黒塗り画像の文字コード 
+
+
+
+ key\+\_\+image.\+h の 46 行目に定義があります。
+
+
+
+\subsubsection{列挙型詳解}
+\index{key\+\_\+image.\+h@{key\+\_\+image.\+h}!K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+Type@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+Type}}
+\index{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+Type@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+Type}!key\+\_\+image.\+h@{key\+\_\+image.\+h}}
+\paragraph[{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+Type}}\label{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160cc}
+
+
+キー画像の種類 
+
+\begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K}!key\+\_\+image.\+h@{key\+\_\+image.\+h}}\index{key\+\_\+image.\+h@{key\+\_\+image.\+h}!K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K}}\item[{\em 
+K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K\label{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160ccafdd55dc0589b955d47a363b82940cd1f}
+}]黒鍵があるキー。通常 \index{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K\+\_\+\+M\+A\+K\+E\+W@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K\+\_\+\+M\+A\+K\+E\+W}!key\+\_\+image.\+h@{key\+\_\+image.\+h}}\index{key\+\_\+image.\+h@{key\+\_\+image.\+h}!K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K\+\_\+\+M\+A\+K\+E\+W@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K\+\_\+\+M\+A\+K\+E\+W}}\item[{\em 
+K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K\+\_\+\+M\+A\+K\+E\+W\label{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160cca5898c2d59feac4d1e467b5a83e34ad50}
+}]黒鍵があるキー。白鍵部が押下 \index{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K\+\_\+\+M\+A\+K\+E\+B@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K\+\_\+\+M\+A\+K\+E\+B}!key\+\_\+image.\+h@{key\+\_\+image.\+h}}\index{key\+\_\+image.\+h@{key\+\_\+image.\+h}!K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K\+\_\+\+M\+A\+K\+E\+B@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K\+\_\+\+M\+A\+K\+E\+B}}\item[{\em 
+K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+B\+L\+A\+C\+K\+\_\+\+M\+A\+K\+E\+B\label{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160ccaa729252488723c3e63c6786c44c6f5d9}
+}]黒鍵があるキー。黒鍵部が押下 \index{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+W\+H\+I\+T\+E@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+W\+H\+I\+T\+E}!key\+\_\+image.\+h@{key\+\_\+image.\+h}}\index{key\+\_\+image.\+h@{key\+\_\+image.\+h}!K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+W\+H\+I\+T\+E@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+W\+H\+I\+T\+E}}\item[{\em 
+K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+W\+H\+I\+T\+E\label{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160cca7ab4f53a7298030a3cfcefeca83e5305}
+}]白鍵のみのキー。通常 \index{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}!key\+\_\+image.\+h@{key\+\_\+image.\+h}}\index{key\+\_\+image.\+h@{key\+\_\+image.\+h}!K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E\label{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160ccab5fb40b7e7e274990691f53fff111986}
+}]\end{description}
+\end{Desc}
+
+
+ key\+\_\+image.\+h の 31 行目に定義があります。
+
+
+\begin{DoxyCode}
+32 \{
+33     KEY_IMG_T_BLACK = 0,
+35     KEY_IMG_T_BLACK_MAKEW,
+37     KEY_IMG_T_BLACK_MAKEB,
+39     KEY_IMG_T_WHITE,
+41     
+42     KEY_IMG_NUM_OF_TYPE
+43 \} KEY_IMG_Type;
+\end{DoxyCode}
+
+
+\subsubsection{変数詳解}
+\index{key\+\_\+image.\+h@{key\+\_\+image.\+h}!K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame}}
+\index{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame}!key\+\_\+image.\+h@{key\+\_\+image.\+h}}
+\paragraph[{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame}]{\setlength{\rightskip}{0pt plus 5cm}const \+\_\+\+U\+B\+Y\+T\+E K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame\mbox{[}{\bf K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+K\+E\+Y}\mbox{]}}\label{key__image_8h_aac267b2e32d4518bd2661895e8667365_aac267b2e32d4518bd2661895e8667365}
+
+
+1オクターブ分の\+L\+C\+D文字コード列 
+
+\index{key\+\_\+image.\+h@{key\+\_\+image.\+h}!K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char}}
+\index{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char}!key\+\_\+image.\+h@{key\+\_\+image.\+h}}
+\paragraph[{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char}]{\setlength{\rightskip}{0pt plus 5cm}const \+\_\+\+U\+B\+Y\+T\+E K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char\mbox{[}{\bf K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}\mbox{]}\mbox{[}L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+S\mbox{]}}\label{key__image_8h_ad8bcb9deb96dec3ecacf43106f0f845d_ad8bcb9deb96dec3ecacf43106f0f845d}
+
+
+キー画像種別分のキャラクタ画像ビットマップ 
+

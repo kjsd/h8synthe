@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>H8Synthe: src/key_image.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">H8Synthe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>総合概要</span></a></li>
+      <li><a href="../../annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="../../files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="../../globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d1/de0/key__image_8h_source.html','../../');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">key_image.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d1/de0/key__image_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef KEY_IMG_H_</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define KEY_IMG_H_</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;h8sdk/stddef.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;h8sdk/lcd.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d1/de0/key__image_8h_a6e24b4d8bd16a740050b1d5acfd8a6f1.html#a6e24b4d8bd16a740050b1d5acfd8a6f1">   26</a></span>&#160;<span class="preprocessor">#define KEY_IMG_NUM_OF_KEY 7</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cc">   31</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160ccafdd55dc0589b955d47a363b82940cd1f">   33</a></span>&#160;    <a class="code" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160ccafdd55dc0589b955d47a363b82940cd1f">KEY_IMG_T_BLACK</a> = 0,</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cca5898c2d59feac4d1e467b5a83e34ad50">   35</a></span>&#160;    <a class="code" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cca5898c2d59feac4d1e467b5a83e34ad50">KEY_IMG_T_BLACK_MAKEW</a>,</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160ccaa729252488723c3e63c6786c44c6f5d9">   37</a></span>&#160;    <a class="code" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160ccaa729252488723c3e63c6786c44c6f5d9">KEY_IMG_T_BLACK_MAKEB</a>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cca7ab4f53a7298030a3cfcefeca83e5305">   39</a></span>&#160;    <a class="code" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cca7ab4f53a7298030a3cfcefeca83e5305">KEY_IMG_T_WHITE</a>,</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160ccab5fb40b7e7e274990691f53fff111986">   42</a></span>&#160;    <a class="code" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160ccab5fb40b7e7e274990691f53fff111986">KEY_IMG_NUM_OF_TYPE</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;} <a class="code" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cc">KEY_IMG_Type</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d1/de0/key__image_8h_aea98fd836762cd2c34fa327510a54e57.html#aea98fd836762cd2c34fa327510a54e57">   46</a></span>&#160;<span class="preprocessor">#define KEY_IMG_T_FULL 0xff</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> _UBYTE <a class="code" href="../../d1/de0/key__image_8h_aac267b2e32d4518bd2661895e8667365.html#aac267b2e32d4518bd2661895e8667365">KEY_IMG_initial_frame</a>[<a class="code" href="../../d1/de0/key__image_8h_a6e24b4d8bd16a740050b1d5acfd8a6f1.html#a6e24b4d8bd16a740050b1d5acfd8a6f1">KEY_IMG_NUM_OF_KEY</a>];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> _UBYTE <a class="code" href="../../d1/de0/key__image_8h_ad8bcb9deb96dec3ecacf43106f0f845d.html#ad8bcb9deb96dec3ecacf43106f0f845d">KEY_IMG_char</a>[<a class="code" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160ccab5fb40b7e7e274990691f53fff111986">KEY_IMG_NUM_OF_TYPE</a>][LCD_CG_ROWS];</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* KEY_IMG_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="key__image_8h_ac00361390d99656f240e21132bd160cc_html_ac00361390d99656f240e21132bd160cca7ab4f53a7298030a3cfcefeca83e5305"><div class="ttname"><a href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cca7ab4f53a7298030a3cfcefeca83e5305">KEY_IMG_T_WHITE</a></div><div class="ttdoc">白鍵のみのキー。通常 </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de0/key__image_8h_source.html#l00039">key_image.h:39</a></div></div>
+<div class="ttc" id="key__image_8h_ac00361390d99656f240e21132bd160cc_html_ac00361390d99656f240e21132bd160cc"><div class="ttname"><a href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cc">KEY_IMG_Type</a></div><div class="ttdeci">KEY_IMG_Type</div><div class="ttdoc">キー画像の種類 </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de0/key__image_8h_source.html#l00031">key_image.h:31</a></div></div>
+<div class="ttc" id="key__image_8h_ac00361390d99656f240e21132bd160cc_html_ac00361390d99656f240e21132bd160cca5898c2d59feac4d1e467b5a83e34ad50"><div class="ttname"><a href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cca5898c2d59feac4d1e467b5a83e34ad50">KEY_IMG_T_BLACK_MAKEW</a></div><div class="ttdoc">黒鍵があるキー。白鍵部が押下 </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de0/key__image_8h_source.html#l00035">key_image.h:35</a></div></div>
+<div class="ttc" id="key__image_8h_ac00361390d99656f240e21132bd160cc_html_ac00361390d99656f240e21132bd160ccab5fb40b7e7e274990691f53fff111986"><div class="ttname"><a href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160ccab5fb40b7e7e274990691f53fff111986">KEY_IMG_NUM_OF_TYPE</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de0/key__image_8h_source.html#l00042">key_image.h:42</a></div></div>
+<div class="ttc" id="key__image_8h_ac00361390d99656f240e21132bd160cc_html_ac00361390d99656f240e21132bd160ccafdd55dc0589b955d47a363b82940cd1f"><div class="ttname"><a href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160ccafdd55dc0589b955d47a363b82940cd1f">KEY_IMG_T_BLACK</a></div><div class="ttdoc">黒鍵があるキー。通常 </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de0/key__image_8h_source.html#l00033">key_image.h:33</a></div></div>
+<div class="ttc" id="key__image_8h_ad8bcb9deb96dec3ecacf43106f0f845d_html_ad8bcb9deb96dec3ecacf43106f0f845d"><div class="ttname"><a href="../../d1/de0/key__image_8h_ad8bcb9deb96dec3ecacf43106f0f845d.html#ad8bcb9deb96dec3ecacf43106f0f845d">KEY_IMG_char</a></div><div class="ttdeci">const _UBYTE KEY_IMG_char[KEY_IMG_NUM_OF_TYPE][LCD_CG_ROWS]</div><div class="ttdoc">キー画像種別分のキャラクタ画像ビットマップ </div></div>
+<div class="ttc" id="key__image_8h_a6e24b4d8bd16a740050b1d5acfd8a6f1_html_a6e24b4d8bd16a740050b1d5acfd8a6f1"><div class="ttname"><a href="../../d1/de0/key__image_8h_a6e24b4d8bd16a740050b1d5acfd8a6f1.html#a6e24b4d8bd16a740050b1d5acfd8a6f1">KEY_IMG_NUM_OF_KEY</a></div><div class="ttdeci">#define KEY_IMG_NUM_OF_KEY</div><div class="ttdoc">1オクターブを表現するキー画像の数 </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de0/key__image_8h_source.html#l00026">key_image.h:26</a></div></div>
+<div class="ttc" id="key__image_8h_ac00361390d99656f240e21132bd160cc_html_ac00361390d99656f240e21132bd160ccaa729252488723c3e63c6786c44c6f5d9"><div class="ttname"><a href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160ccaa729252488723c3e63c6786c44c6f5d9">KEY_IMG_T_BLACK_MAKEB</a></div><div class="ttdoc">黒鍵があるキー。黒鍵部が押下 </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de0/key__image_8h_source.html#l00037">key_image.h:37</a></div></div>
+<div class="ttc" id="key__image_8h_aac267b2e32d4518bd2661895e8667365_html_aac267b2e32d4518bd2661895e8667365"><div class="ttname"><a href="../../d1/de0/key__image_8h_aac267b2e32d4518bd2661895e8667365.html#aac267b2e32d4518bd2661895e8667365">KEY_IMG_initial_frame</a></div><div class="ttdeci">const _UBYTE KEY_IMG_initial_frame[KEY_IMG_NUM_OF_KEY]</div><div class="ttdoc">1オクターブ分のLCD文字コード列 </div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../d1/de0/key__image_8h.html">key_image.h</a></li>
+    <li class="footer">2016年02月28日(日) 17時30分12秒作成 - H8Synthe / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

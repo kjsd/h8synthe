@@ -1,0 +1,135 @@
+\subsection{src/synthesizer.h ファイル}
+\label{synthesizer_8h}\index{src/synthesizer.\+h@{src/synthesizer.\+h}}
+
+
+シンセサイザー  
+
+
+{\ttfamily \#include $<$h8sdk/stddef.\+h$>$}\\*
+{\ttfamily \#include $<$h8sdk/ioctl.\+h$>$}\\*
+{\ttfamily \#include $<$h8sdk/led.\+h$>$}\\*
+{\ttfamily \#include $<$h8sdk/lcd.\+h$>$}\\*
+{\ttfamily \#include $<$h8sdk/adc.\+h$>$}\\*
+{\ttfamily \#include $<$h8sdk/ps2.\+h$>$}\\*
+{\ttfamily \#include $<$h8sdk/kbd\+\_\+jp106.\+h$>$}\\*
+{\ttfamily \#include $<$h8sdk/sound.\+h$>$}\\*
+{\ttfamily \#include $<$h8sdk/music.\+h$>$}\\*
+{\ttfamily \#include $<$h8sdk/envelope.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}key\+\_\+image.\+h\char`\"{}}\\*
+synthesizer.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dbc/synthesizer_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{synthesizer_8h_db/d8e/structKeyParam__}{Key\+Param\+\_\+}
+\begin{DoxyCompactList}\small\item\em 鍵盤パラメータ型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{synthesizer_8h_aa49d37848f9e48ae5be1e7e87d2abcc3_aa49d37848f9e48ae5be1e7e87d2abcc3}{N\+U\+M\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+}~2
+\begin{DoxyCompactList}\small\item\em キーボードバンクの数 \end{DoxyCompactList}\item 
+\#define \hyperlink{synthesizer_8h_a19965f59d417acca89a01d9063731c50_a19965f59d417acca89a01d9063731c50}{K\+E\+Y\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+}~29
+\begin{DoxyCompactList}\small\item\em バンク当たりの鍵盤数。2オクターブ分 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+シンセサイザー 
+
+ 
+
+\subsubsection{クラス詳解}
+\index{Key\+Param\+\_\+@{Key\+Param\+\_\+}}\label{structKeyParam__}
+\paragraph{struct Key\+Param\+\_\+}
+鍵盤パラメータ型 
+
+ synthesizer.\+h の 60 行目に定義があります。
+
+
+
+Key\+Param\+\_\+ 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{dc/d6a/structKeyParam____coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{クラスメンバ}
+\+\_\+\+U\+B\+Y\+T\+E\label{synthesizer_8h_aee8e36a4a011ca2f16a1a0a1516177b8}
+&
+key&
+P\+S/2キーコード \\
+\hline
+
+\+\_\+\+U\+B\+Y\+T\+E\label{synthesizer_8h_a9b51a65e62e596a079f5b200691cf94a}
+&
+freq&
+音階 \\
+\hline
+
+\+\_\+\+U\+B\+Y\+T\+E\label{synthesizer_8h_a08775d991d20219f3056ae8e0cb6caf7}
+&
+freq\+\_\+other&
+freqに対する半音上の音階 \\
+\hline
+
+\hyperlink{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160cc}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+Type}\label{synthesizer_8h_a2e4c7a16f352538a2fdb4f57936fe221}
+&
+break\+\_\+ch&
+鍵盤を離しているときの\+L\+C\+D文字コード \\
+\hline
+
+\hyperlink{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160cc}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+Type}\label{synthesizer_8h_aab13bbb06742a3558c2047a514e1c6cf}
+&
+make\+\_\+ch&
+鍵盤を押しているときの\+L\+C\+D文字コード \\
+\hline
+
+\hyperlink{key__image_8h_ac00361390d99656f240e21132bd160cc_ac00361390d99656f240e21132bd160cc}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+Type}\label{synthesizer_8h_ad82ec53dd29248caebeb83963d51a51a}
+&
+make\+\_\+other\+\_\+ch&
+freq\+\_\+otherの鍵盤を押しているときの\+L\+C\+D文字コード \\
+\hline
+
+\+\_\+\+S\+I\+N\+T\label{synthesizer_8h_a884f9d4a3e53da8107c46d8894f37d75}
+&
+lcd\+\_\+x&
+鍵盤キャラクタの\+L\+C\+D表示位置。横 \\
+\hline
+
+\+\_\+\+S\+I\+N\+T\label{synthesizer_8h_a6d6cf94e828c520b3bab9eb0e580c5b4}
+&
+lcd\+\_\+y&
+鍵盤キャラクタの\+L\+C\+D表示位置。縦 \\
+\hline
+
+\end{DoxyFields}
+
+
+\subsubsection{マクロ定義詳解}
+\index{synthesizer.\+h@{synthesizer.\+h}!N\+U\+M\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+@{N\+U\+M\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+}}
+\index{N\+U\+M\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+@{N\+U\+M\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+}!synthesizer.\+h@{synthesizer.\+h}}
+\paragraph[{N\+U\+M\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+~2}\label{synthesizer_8h_aa49d37848f9e48ae5be1e7e87d2abcc3_aa49d37848f9e48ae5be1e7e87d2abcc3}
+
+
+キーボードバンクの数 
+
+
+
+ synthesizer.\+h の 53 行目に定義があります。
+
+\index{synthesizer.\+h@{synthesizer.\+h}!K\+E\+Y\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+@{K\+E\+Y\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+}}
+\index{K\+E\+Y\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+@{K\+E\+Y\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+}!synthesizer.\+h@{synthesizer.\+h}}
+\paragraph[{K\+E\+Y\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+E\+Y\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+~29}\label{synthesizer_8h_a19965f59d417acca89a01d9063731c50_a19965f59d417acca89a01d9063731c50}
+
+
+バンク当たりの鍵盤数。2オクターブ分 
+
+
+
+ synthesizer.\+h の 55 行目に定義があります。
+

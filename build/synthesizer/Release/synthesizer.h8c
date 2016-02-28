@@ -1,0 +1,11 @@
+-cpu=300HN
+-include="C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\..\..\..\h8sdk\include"
+-define=NDEBUG,USE_MUSIC_RECORD
+-object="C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\Release\synthesizer.obj"
+-nolist
+-speed=register,switch,shift,struct,expression,loop=2,inline
+-goptimize
+-chgincpath
+"C:\cygwin\home\minoru\work\synthesizer\src\synthesizer.c"
+-lang=c
+-nologo

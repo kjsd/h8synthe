@@ -1,0 +1,39 @@
+シンセサイザーH8
+****************
+
+これは何？
+==========
+H8/3694マイコンボード上のシンセサイザーアプリケーションです．
+より詳しいマニュアルはdoc/マニュアル.docにあります．
+より詳しい内部設計書はdoc/html/index.htmlまたはdoc/latex/refman.pdfに
+あります．
+
+
+構成物
+======
+- build
+H8Syntheの構築に必要なファイルが格納されています。
+
+- doc
+ドキュメント類です。
+
+- src
+H8Syntheの実装コード群です。
+
+- Makefile
+インタフェース仕様書を作成するためのルールが記述されています。通常は
+特に必要ありません。実行にはGNU makeと、doxygen/latexが必要です。
+
+- README.txt
+このファイルです。
+
+何が必要？
+==========
+- High-Performance Embedded Workshop(HEW)
+- H8 Platform SDK(H8SDK)
+
+コンパイル
+==========
+マニュアル参照
+
+// Kenji MINOURA (kenji@kandj.org)

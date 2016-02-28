@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>H8Synthe: src/synthesizer.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">H8Synthe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>総合概要</span></a></li>
+      <li><a href="../../annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="../../files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="../../globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('de/d5a/synthesizer_8h_source.html','../../');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">synthesizer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d5a/synthesizer_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#ifndef SYNTH_H_</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define SYNTH_H_</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;h8sdk/stddef.h&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;h8sdk/ioctl.h&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;h8sdk/led.h&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;h8sdk/lcd.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;h8sdk/adc.h&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;h8sdk/ps2.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;h8sdk/kbd_jp106.h&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;h8sdk/sound.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;h8sdk/music.h&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;h8sdk/envelope.h&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/de0/key__image_8h.html">key_image.h</a>&quot;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../de/d5a/synthesizer_8h_aa49d37848f9e48ae5be1e7e87d2abcc3.html#aa49d37848f9e48ae5be1e7e87d2abcc3">   53</a></span>&#160;<span class="preprocessor">#define NUM_OF_BANK_ 2</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../de/d5a/synthesizer_8h_a19965f59d417acca89a01d9063731c50.html#a19965f59d417acca89a01d9063731c50">   55</a></span>&#160;<span class="preprocessor">#define KEY_OF_BANK_ 29</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../de/d5a/synthesizer_8h.html">   60</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../de/d5a/synthesizer_8h.html#aee8e36a4a011ca2f16a1a0a1516177b8">   62</a></span>&#160;    _UBYTE <a class="code" href="../../de/d5a/synthesizer_8h.html#aee8e36a4a011ca2f16a1a0a1516177b8">key</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../de/d5a/synthesizer_8h.html#a9b51a65e62e596a079f5b200691cf94a">   64</a></span>&#160;    _UBYTE <a class="code" href="../../de/d5a/synthesizer_8h.html#a9b51a65e62e596a079f5b200691cf94a">freq</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../de/d5a/synthesizer_8h.html#a08775d991d20219f3056ae8e0cb6caf7">   66</a></span>&#160;    _UBYTE <a class="code" href="../../de/d5a/synthesizer_8h.html#a08775d991d20219f3056ae8e0cb6caf7">freq_other</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../de/d5a/synthesizer_8h.html#a2e4c7a16f352538a2fdb4f57936fe221">   68</a></span>&#160;    <a class="code" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cc">KEY_IMG_Type</a> <a class="code" href="../../de/d5a/synthesizer_8h.html#a2e4c7a16f352538a2fdb4f57936fe221">break_ch</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../de/d5a/synthesizer_8h.html#aab13bbb06742a3558c2047a514e1c6cf">   70</a></span>&#160;    <a class="code" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cc">KEY_IMG_Type</a> <a class="code" href="../../de/d5a/synthesizer_8h.html#aab13bbb06742a3558c2047a514e1c6cf">make_ch</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../de/d5a/synthesizer_8h.html#ad82ec53dd29248caebeb83963d51a51a">   72</a></span>&#160;    <a class="code" href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cc">KEY_IMG_Type</a> <a class="code" href="../../de/d5a/synthesizer_8h.html#ad82ec53dd29248caebeb83963d51a51a">make_other_ch</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../de/d5a/synthesizer_8h.html#a884f9d4a3e53da8107c46d8894f37d75">   74</a></span>&#160;    _SINT <a class="code" href="../../de/d5a/synthesizer_8h.html#a884f9d4a3e53da8107c46d8894f37d75">lcd_x</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="../../de/d5a/synthesizer_8h.html#a6d6cf94e828c520b3bab9eb0e580c5b4">   76</a></span>&#160;    _SINT <a class="code" href="../../de/d5a/synthesizer_8h.html#a6d6cf94e828c520b3bab9eb0e580c5b4">lcd_y</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;} <a class="code" href="../../de/d5a/synthesizer_8h.html#db/d8e/structKeyParam__">KeyParam_</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="../../de/d5a/synthesizer_8h.html#db/d8e/structKeyParam__">KeyParam_</a> key_table_[<a class="code" href="../../de/d5a/synthesizer_8h_aa49d37848f9e48ae5be1e7e87d2abcc3.html#aa49d37848f9e48ae5be1e7e87d2abcc3">NUM_OF_BANK_</a>][<a class="code" href="../../de/d5a/synthesizer_8h_a19965f59d417acca89a01d9063731c50.html#a19965f59d417acca89a01d9063731c50">KEY_OF_BANK_</a>];</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">static</span> _UBYTE pronounce_table_[SOUND_MAX_PRONOUNCE];</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">static</span> MUSIC_RecordReqId rec_table_[SOUND_MAX_PRONOUNCE];</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> _UBYTE play_char_[LCD_CG_ROWS];</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> _UBYTE play_ch_;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> _UBYTE rec_char_[LCD_CG_ROWS];</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> _UBYTE rec_ch_;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">static</span> _SINT findPronounce_(_UBYTE freq);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keyword">static</span> _SINT setPronounce_(_UBYTE freq);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">static</span> <a class="code" href="../../de/d5a/synthesizer_8h.html#db/d8e/structKeyParam__">KeyParam_</a>* findParam_(_UBYTE bank, _UBYTE key);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> execADC_();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SYNTH_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="key__image_8h_ac00361390d99656f240e21132bd160cc_html_ac00361390d99656f240e21132bd160cc"><div class="ttname"><a href="../../d1/de0/key__image_8h_ac00361390d99656f240e21132bd160cc.html#ac00361390d99656f240e21132bd160cc">KEY_IMG_Type</a></div><div class="ttdeci">KEY_IMG_Type</div><div class="ttdoc">キー画像の種類 </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de0/key__image_8h_source.html#l00031">key_image.h:31</a></div></div>
+<div class="ttc" id="synthesizer_8h_html_a9b51a65e62e596a079f5b200691cf94a"><div class="ttname"><a href="../../de/d5a/synthesizer_8h.html#a9b51a65e62e596a079f5b200691cf94a">KeyParam_::freq</a></div><div class="ttdeci">_UBYTE freq</div><div class="ttdoc">音階 </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5a/synthesizer_8h_source.html#l00064">synthesizer.h:64</a></div></div>
+<div class="ttc" id="key__image_8h_html"><div class="ttname"><a href="../../d1/de0/key__image_8h.html">key_image.h</a></div><div class="ttdoc">鍵盤画像データ </div></div>
+<div class="ttc" id="synthesizer_8h_aa49d37848f9e48ae5be1e7e87d2abcc3_html_aa49d37848f9e48ae5be1e7e87d2abcc3"><div class="ttname"><a href="../../de/d5a/synthesizer_8h_aa49d37848f9e48ae5be1e7e87d2abcc3.html#aa49d37848f9e48ae5be1e7e87d2abcc3">NUM_OF_BANK_</a></div><div class="ttdeci">#define NUM_OF_BANK_</div><div class="ttdoc">キーボードバンクの数 </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5a/synthesizer_8h_source.html#l00053">synthesizer.h:53</a></div></div>
+<div class="ttc" id="synthesizer_8h_a19965f59d417acca89a01d9063731c50_html_a19965f59d417acca89a01d9063731c50"><div class="ttname"><a href="../../de/d5a/synthesizer_8h_a19965f59d417acca89a01d9063731c50.html#a19965f59d417acca89a01d9063731c50">KEY_OF_BANK_</a></div><div class="ttdeci">#define KEY_OF_BANK_</div><div class="ttdoc">バンク当たりの鍵盤数。2オクターブ分 </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5a/synthesizer_8h_source.html#l00055">synthesizer.h:55</a></div></div>
+<div class="ttc" id="synthesizer_8h_html_aab13bbb06742a3558c2047a514e1c6cf"><div class="ttname"><a href="../../de/d5a/synthesizer_8h.html#aab13bbb06742a3558c2047a514e1c6cf">KeyParam_::make_ch</a></div><div class="ttdeci">KEY_IMG_Type make_ch</div><div class="ttdoc">鍵盤を押しているときのLCD文字コード </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5a/synthesizer_8h_source.html#l00070">synthesizer.h:70</a></div></div>
+<div class="ttc" id="synthesizer_8h_html_a6d6cf94e828c520b3bab9eb0e580c5b4"><div class="ttname"><a href="../../de/d5a/synthesizer_8h.html#a6d6cf94e828c520b3bab9eb0e580c5b4">KeyParam_::lcd_y</a></div><div class="ttdeci">_SINT lcd_y</div><div class="ttdoc">鍵盤キャラクタのLCD表示位置。縦 </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5a/synthesizer_8h_source.html#l00076">synthesizer.h:76</a></div></div>
+<div class="ttc" id="synthesizer_8h_html_aee8e36a4a011ca2f16a1a0a1516177b8"><div class="ttname"><a href="../../de/d5a/synthesizer_8h.html#aee8e36a4a011ca2f16a1a0a1516177b8">KeyParam_::key</a></div><div class="ttdeci">_UBYTE key</div><div class="ttdoc">PS/2キーコード </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5a/synthesizer_8h_source.html#l00062">synthesizer.h:62</a></div></div>
+<div class="ttc" id="synthesizer_8h_html_a08775d991d20219f3056ae8e0cb6caf7"><div class="ttname"><a href="../../de/d5a/synthesizer_8h.html#a08775d991d20219f3056ae8e0cb6caf7">KeyParam_::freq_other</a></div><div class="ttdeci">_UBYTE freq_other</div><div class="ttdoc">freqに対する半音上の音階 </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5a/synthesizer_8h_source.html#l00066">synthesizer.h:66</a></div></div>
+<div class="ttc" id="synthesizer_8h_html_ad82ec53dd29248caebeb83963d51a51a"><div class="ttname"><a href="../../de/d5a/synthesizer_8h.html#ad82ec53dd29248caebeb83963d51a51a">KeyParam_::make_other_ch</a></div><div class="ttdeci">KEY_IMG_Type make_other_ch</div><div class="ttdoc">freq_otherの鍵盤を押しているときのLCD文字コード </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5a/synthesizer_8h_source.html#l00072">synthesizer.h:72</a></div></div>
+<div class="ttc" id="synthesizer_8h_html_a2e4c7a16f352538a2fdb4f57936fe221"><div class="ttname"><a href="../../de/d5a/synthesizer_8h.html#a2e4c7a16f352538a2fdb4f57936fe221">KeyParam_::break_ch</a></div><div class="ttdeci">KEY_IMG_Type break_ch</div><div class="ttdoc">鍵盤を離しているときのLCD文字コード </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5a/synthesizer_8h_source.html#l00068">synthesizer.h:68</a></div></div>
+<div class="ttc" id="synthesizer_8h_html_a884f9d4a3e53da8107c46d8894f37d75"><div class="ttname"><a href="../../de/d5a/synthesizer_8h.html#a884f9d4a3e53da8107c46d8894f37d75">KeyParam_::lcd_x</a></div><div class="ttdeci">_SINT lcd_x</div><div class="ttdoc">鍵盤キャラクタのLCD表示位置。横 </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5a/synthesizer_8h_source.html#l00074">synthesizer.h:74</a></div></div>
+<div class="ttc" id="synthesizer_8h_html_db/d8e/structKeyParam__"><div class="ttname"><a href="../../de/d5a/synthesizer_8h.html#db/d8e/structKeyParam__">KeyParam_</a></div><div class="ttdoc">鍵盤パラメータ型 </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5a/synthesizer_8h_source.html#l00060">synthesizer.h:60</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../de/d5a/synthesizer_8h.html">synthesizer.h</a></li>
+    <li class="footer">2016年02月28日(日) 17時30分12秒作成 - H8Synthe / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

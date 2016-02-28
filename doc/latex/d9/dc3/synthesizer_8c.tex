@@ -1,0 +1,307 @@
+\subsection{src/synthesizer.c ファイル}
+\label{synthesizer_8c}\index{src/synthesizer.\+c@{src/synthesizer.\+c}}
+
+
+This file contains the implementation of modules which are Synthesizer.  
+
+
+{\ttfamily \#include $<$h8sdk/stdio.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}synthesizer.\+h\char`\"{}}\\*
+synthesizer.\+c の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d72/synthesizer_8c__incl}
+\end{center}
+\end{figure}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{synthesizer_8c_a6288eba0f8e8ad3ab1544ad731eb7667_a6288eba0f8e8ad3ab1544ad731eb7667}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+This file contains the implementation of modules which are Synthesizer. 
+
+\begin{DoxyVersion}{バージョン}
+
+\end{DoxyVersion}
+\begin{DoxyParagraph}{Id}
+\hyperlink{synthesizer_8c}{synthesizer.\+c} 140 2009-\/03-\/10 07\+:06\+:43\+Z Administrator 
+\end{DoxyParagraph}
+\begin{DoxyVersion}{バージョン}
+\$\+Name\+:\$
+\end{DoxyVersion}
+\begin{DoxyAuthor}{著者}
+Kenji M\+I\+N\+O\+U\+R\+A / \href{mailto:kenji@kandj.org}{\tt kenji@kandj.\+org}
+\end{DoxyAuthor}
+Copyright (c) 2008 K\&J Software Design, Ltd All rights reserved.
+
+\begin{DoxySeeAlso}{参照}
+$<$related\+\_\+items$>$ 
+\end{DoxySeeAlso}
+
+
+\subsubsection{関数詳解}
+\index{synthesizer.\+c@{synthesizer.\+c}!main@{main}}
+\index{main@{main}!synthesizer.\+c@{synthesizer.\+c}}
+\paragraph[{main(void)}]{\setlength{\rightskip}{0pt plus 5cm}void main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{synthesizer_8c_a6288eba0f8e8ad3ab1544ad731eb7667_a6288eba0f8e8ad3ab1544ad731eb7667}
+
+
+ synthesizer.\+c の 273 行目に定義があります。
+
+
+
+参照先 Key\+Param\+\_\+\+::break\+\_\+ch, Key\+Param\+\_\+\+::freq, Key\+Param\+\_\+\+::freq\+\_\+other, K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char, K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame, K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+T\+\_\+\+F\+U\+L\+L, Key\+Param\+\_\+\+::lcd\+\_\+x, Key\+Param\+\_\+\+::lcd\+\_\+y, Key\+Param\+\_\+\+::make\+\_\+ch, Key\+Param\+\_\+\+::make\+\_\+other\+\_\+ch, N\+U\+M\+\_\+\+O\+F\+\_\+\+B\+A\+N\+K\+\_\+.
+
+
+
+参照元 \+\_\+\+\_\+entry().
+
+
+\begin{DoxyCode}
+274 \{
+275     SOUND\_Tone tone = \{ SOUND\_NA, &ENVELOPE\_piano, &ENVELOPE\_piano\_reverb,
+276                         \_FALSE \};
+277     KeyParam_* param = NULL;
+278     \_SINT idx = 0;
+279     \_UBYTE bank = 0;
+280     \_UBYTE key = 0;
+281     \_BOOL kbd\_break = \_FALSE;
+282     \_UBYTE lcd\_ch;
+283     \_SINT i, j;
+284     \_BOOL record = \_FALSE;
+285 
+286     IOCTL\_init();
+287     LED\_INIT;
+288     LCD\_init();
+289     PS2\_init();
+290     MUSIC\_init();
+291 \textcolor{preprocessor}{#ifndef NDEBUG}
+292     SCI\_init();
+293 \textcolor{preprocessor}{#endif }\textcolor{comment}{/* NDEBUG */}\textcolor{preprocessor}{}
+294     ADC\_init(ADC\_SCAN, \_FALSE);
+295     ADC\_enable(ADC\_AN1);
+296 
+297     LCD\_setChar(play\_ch\_, play\_char\_);
+298     LCD\_setChar(rec\_ch\_, rec\_char\_);
+299 
+300     \textcolor{keywordflow}{for} (i = 0; i < \_sizeof\_array(KEY_IMG_char); i++)
+301     \{
+302         LCD\_setChar(i, KEY_IMG_char[i]);
+303     \}
+304     LCD\_write(KEY_IMG_initial_frame, \_sizeof\_array(KEY_IMG_initial_frame));
+305     LCD\_write(KEY_IMG_initial_frame, \_sizeof\_array(KEY_IMG_initial_frame));
+306     LCD\_puts(\textcolor{stringliteral}{" P"});
+307     LCD\_write(KEY_IMG_initial_frame, \_sizeof\_array(KEY_IMG_initial_frame));
+308     LCD\_write(KEY_IMG_initial_frame, \_sizeof\_array(KEY_IMG_initial_frame));
+309 
+310     ADC\_start();
+311     SOUND\_play();
+312 
+313     \textcolor{keywordflow}{while} (\_TRUE)
+314     \{
+315         execADC\_();
+316 
+317         key = 0;
+318         \textcolor{keywordflow}{if} (PS2\_read(&key, 1, \_FALSE, -1) <= 0) \textcolor{keywordflow}{continue};
+319 
+320         \_dprintf((\textcolor{stringliteral}{"%x"}, key));
+321 
+322         \textcolor{keywordflow}{switch} (key)
+323         \{
+324         \textcolor{keywordflow}{case} KBD\_JP106\_BREAK:
+325             kbd\_break = \_TRUE;
+326             \textcolor{keywordflow}{continue};
+327 
+328         \textcolor{keywordflow}{case} KBD\_JP106\_SPACE:
+329             \textcolor{keywordflow}{if} (!kbd\_break)
+330             \{
+331                 bank = \_next\_ring(bank, NUM_OF_BANK_ - 1);
+332             \}
+333             \textcolor{keywordflow}{break};
+334 
+335         \textcolor{keywordflow}{case} KBD\_JP106\_ENTER:
+336             \textcolor{keywordflow}{if} (!kbd\_break)
+337             \{
+338                 \textcolor{keywordflow}{if} (record)
+339                 \{
+340                     record = \_FALSE;
+341                     MUSIC\_stop();
+342                 \}
+343                 LCD\_setCursor(15, 1);
+344                 LCD\_write(&play\_ch\_, 1);
+345                 MUSIC\_play();
+346             \}
+347             \textcolor{keywordflow}{break};
+348 
+349         \textcolor{keywordflow}{case} KBD\_JP106\_HENKAN:
+350             \textcolor{keywordflow}{if} (!kbd\_break && !record)
+351             \{
+352                 record = \_TRUE;
+353                 LCD\_setCursor(15, 1);
+354                 LCD\_write(&rec\_ch\_, 1);
+355                 MUSIC\_record();
+356                 SOUND\_play();
+357             \}
+358             \textcolor{keywordflow}{break};
+359 
+360         \textcolor{keywordflow}{case} KBD\_JP106\_MUHENKAN:
+361             \textcolor{keywordflow}{if} (!kbd\_break)
+362             \{
+363                 record = \_FALSE;
+364                 LCD\_setCursor(15, 1);
+365                 LCD\_puts(\textcolor{stringliteral}{" "});
+366                 MUSIC\_stop();
+367                 SOUND\_play();
+368             \}
+369             \textcolor{keywordflow}{break};
+370 
+371         \textcolor{keywordflow}{case} KBD\_JP106\_F1:
+372             \textcolor{keywordflow}{if} (!kbd\_break)
+373             \{
+374                 tone.evlp = &ENVELOPE\_piano;
+375                 tone.reverb = &ENVELOPE\_piano\_reverb;
+376                 tone.loop = \_FALSE;
+377                 LCD\_setCursor(15, 0);
+378                 LCD\_puts(\textcolor{stringliteral}{"P"});
+379             \}
+380             \textcolor{keywordflow}{break};
+381 
+382         \textcolor{keywordflow}{case} KBD\_JP106\_F2:
+383             \textcolor{keywordflow}{if} (!kbd\_break)
+384             \{
+385                 tone.evlp = &ENVELOPE\_flute;
+386                 tone.reverb = &ENVELOPE\_flute\_reverb;
+387                 tone.loop = \_TRUE;
+388                 LCD\_setCursor(15, 0);
+389                 LCD\_puts(\textcolor{stringliteral}{"F"});
+390             \}
+391             \textcolor{keywordflow}{break};
+392 
+393         \textcolor{keywordflow}{case} KBD\_JP106\_F3:
+394             \textcolor{keywordflow}{if} (!kbd\_break)
+395             \{
+396                 tone.evlp = &ENVELOPE\_drum;
+397                 tone.reverb = NULL;
+398                 tone.loop = \_FALSE;
+399                 LCD\_setCursor(15, 0);
+400                 LCD\_puts(\textcolor{stringliteral}{"D"});
+401             \}
+402             \textcolor{keywordflow}{break};
+403 
+404         \textcolor{keywordflow}{case} KBD\_JP106\_F4:
+405             \textcolor{keywordflow}{if} (!kbd\_break)
+406             \{
+407                 tone.evlp = &ENVELOPE\_trumpet;
+408                 tone.reverb = &ENVELOPE\_trumpet\_reverb;
+409                 tone.loop = \_TRUE;
+410                 LCD\_setCursor(15, 0);
+411                 LCD\_puts(\textcolor{stringliteral}{"T"});
+412             \}
+413             \textcolor{keywordflow}{break};
+414 
+415         \textcolor{keywordflow}{case} KBD\_JP106\_F5:
+416             \textcolor{keywordflow}{if} (!kbd\_break)
+417             \{
+418                 tone.evlp = &ENVELOPE\_harp;
+419                 tone.reverb = &ENVELOPE\_harp\_reverb;
+420                 tone.loop = \_FALSE;
+421                 LCD\_setCursor(15, 0);
+422                 LCD\_puts(\textcolor{stringliteral}{"H"});
+423             \}
+424             \textcolor{keywordflow}{break};
+425 
+426         \textcolor{keywordflow}{case} KBD\_JP106\_NA:
+427             \textcolor{keywordflow}{break};
+428 
+429         \textcolor{keywordflow}{default}:
+430             param = findParam\_(bank, key);
+431             \textcolor{keywordflow}{if} (param == NULL) \textcolor{keywordflow}{break};
+432 
+433             idx = findPronounce\_(param->freq);
+434             \textcolor{keywordflow}{if} (!kbd\_break)
+435             \{
+436                 \textcolor{keywordflow}{if} (idx >= 0) \textcolor{keywordflow}{break};
+437 
+438                 idx = setPronounce\_(param->freq);
+439                 \textcolor{keywordflow}{if} (idx < 0) \textcolor{keywordflow}{break};
+440 
+441                 tone.freq = param->freq;
+442                 \textcolor{keywordflow}{if} (record)
+443                 \{
+444                     rec\_table\_[idx] = MUSIC\_recStart(&tone);
+445                     \textcolor{keywordflow}{if} (rec\_table\_[idx] == MUSIC\_RECREQID\_INVALID)
+446                     \{
+447                         record = \_FALSE;
+448                         LCD\_setCursor(15, 1);
+449                         LCD\_puts(\textcolor{stringliteral}{" "});
+450                         MUSIC\_stop();
+451                         SOUND\_play();
+452                     \}
+453                 \}
+454                 SOUND\_setTone(idx, &tone);
+455 
+456                 LCD\_setCursor(param->lcd_x, param->lcd_y);
+457                 \textcolor{keywordflow}{if} (findPronounce\_(param->freq_other) >= 0)
+458                 \{
+459                     lcd\_ch = KEY_IMG_T_FULL;
+460                 \}
+461                 \textcolor{keywordflow}{else}
+462                 \{
+463                     lcd\_ch = param->make_ch;
+464                 \}
+465                 LCD\_write(&lcd\_ch, 1);
+466 
+467                 \_dprintf((\textcolor{stringliteral}{"(SET:%d)(M)\(\backslash\)r\(\backslash\)n"}, idx));
+468             \}
+469             \textcolor{keywordflow}{else}
+470             \{
+471                 \textcolor{keywordflow}{if} (idx < 0) \textcolor{keywordflow}{break};
+472 
+473                 \textcolor{keywordflow}{if} (record)
+474                 \{
+475                     MUSIC\_recStop(rec\_table\_[idx]);
+476                     rec\_table\_[idx] = MUSIC\_RECREQID\_INVALID;
+477                 \}
+478                 SOUND\_removeTone(idx);
+479                 pronounce\_table\_[idx] = SOUND\_NA;
+480 
+481                 LCD\_setCursor(param->lcd_x, param->lcd_y);
+482                 \textcolor{keywordflow}{if} (findPronounce\_(param->freq_other) >= 0)
+483                 \{
+484                     lcd\_ch = param->make_other_ch;
+485                 \}
+486                 \textcolor{keywordflow}{else}
+487                 \{
+488                     lcd\_ch = param->break_ch;
+489                 \}
+490                 LCD\_write(&lcd\_ch, 1);
+491 
+492                 \_dprintf((\textcolor{stringliteral}{"(RMV:%d)(B)\(\backslash\)r\(\backslash\)n"}, idx));
+493             \}
+494             \textcolor{keywordflow}{break};
+495         \}
+496 
+497         kbd\_break = \_FALSE;
+498     \}
+499 \}
+\end{DoxyCode}
+
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{d9/dc3/synthesizer_8c_a6288eba0f8e8ad3ab1544ad731eb7667_a6288eba0f8e8ad3ab1544ad731eb7667_icgraph}
+\end{center}
+\end{figure}
+
+

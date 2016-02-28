@@ -1,0 +1,87 @@
+Optimizing Linkage Editor (V.9.02.00.000)         16-Mar-2009 13:55:12
+
+*** Options ***
+
+-subcommand=C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\Release\synthesizer.hlk
+-noprelink
+-nodebug
+-rom=D=R
+-nomessage
+-list="C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\Release\synthesizer.map"
+-optimize=speed
+-start=PResetPRG,PIntPRG/0400,P,C,C$DSEC,C$BSEC,D/0800,B,R/0F780,S/0FE80
+-nologo
+-input="C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\Release\dbsct.obj"
+-input="C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\Release\intprg.obj"
+-input="C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\Release\key_image.obj"
+-input="C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\Release\resetprg.obj"
+-input="C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\Release\synthesizer.obj"
+-library="C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\..\..\..\h8sdk\build\h8sdk\Release\h8sdk.lib"
+-library="C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\Release\synthesizer.lib"
+-output="C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\Release\synthesizer.abs"
+-end
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+$VECT0
+                                  00000000  00000001         2   2
+$VECT7
+                                  0000000e  0000000f         2   2
+$VECT8
+                                  00000010  00000011         2   2
+$VECT9
+                                  00000012  00000013         2   2
+$VECT10
+                                  00000014  00000015         2   2
+$VECT11
+                                  00000016  00000017         2   2
+$VECT12
+                                  00000018  00000019         2   2
+$VECT13
+                                  0000001a  0000001b         2   2
+$VECT14
+                                  0000001c  0000001d         2   2
+$VECT15
+                                  0000001e  0000001f         2   2
+$VECT16
+                                  00000020  00000021         2   2
+$VECT17
+                                  00000022  00000023         2   2
+$VECT18
+                                  00000024  00000025         2   2
+$VECT19
+                                  00000026  00000027         2   2
+$VECT21
+                                  0000002a  0000002b         2   2
+$VECT22
+                                  0000002c  0000002d         2   2
+$VECT23
+                                  0000002e  0000002f         2   2
+$VECT24
+                                  00000030  00000031         2   2
+$VECT25
+                                  00000032  00000033         2   2
+PResetPRG
+                                  00000400  00000413        14   2
+PIntPRG
+                                  00000414  00000487        74   2
+P
+                                  00000800  00002d8f      2590   2
+C
+                                  00002d90  000039ab       c1c   2
+C$DSEC
+                                  000039ac  000039b1         6   2
+C$BSEC
+                                  000039b2  000039b5         4   2
+D
+                                  000039b6  00004085       6d0   2
+B
+                                  0000f780  0000f78b         c   2
+R
+                                  0000f78c  0000fe5b       6d0   2
+S
+                                  0000fe80  0000ff7f       100   2

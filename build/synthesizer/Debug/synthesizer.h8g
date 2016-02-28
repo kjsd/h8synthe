@@ -1,0 +1,3 @@
+-cpu=300HN
+-output="C:\cygwin\home\minoru\work\synthesizer\build\synthesizer\Debug\synthesizer.lib"
+-head=runtime,new,stdio,stdlib

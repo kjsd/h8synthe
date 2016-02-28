@@ -1,0 +1,78 @@
+\subsection{src/key\+\_\+image.c ファイル}
+\label{key__image_8c}\index{src/key\+\_\+image.\+c@{src/key\+\_\+image.\+c}}
+
+
+鍵盤画像データ  
+
+
+{\ttfamily \#include \char`\"{}key\+\_\+image.\+h\char`\"{}}\\*
+key\+\_\+image.\+c の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{df/d59/key__image_8c__incl}
+\end{center}
+\end{figure}
+\subsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+const \+\_\+\+U\+B\+Y\+T\+E \hyperlink{key__image_8c_aac267b2e32d4518bd2661895e8667365_aac267b2e32d4518bd2661895e8667365}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame} \mbox{[}\hyperlink{key__image_8h_a6e24b4d8bd16a740050b1d5acfd8a6f1_a6e24b4d8bd16a740050b1d5acfd8a6f1}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+K\+E\+Y}\mbox{]}
+\begin{DoxyCompactList}\small\item\em 1オクターブ分の\+L\+C\+D文字コード列 \end{DoxyCompactList}\item 
+const \+\_\+\+U\+B\+Y\+T\+E \hyperlink{key__image_8c_a232f4f540a0f671fb2f980064795d03b_a232f4f540a0f671fb2f980064795d03b}{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char} \mbox{[}$\,$\mbox{]}\mbox{[}L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+S\mbox{]}
+\begin{DoxyCompactList}\small\item\em キー画像種別分のキャラクタ画像ビットマップ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+鍵盤画像データ 
+
+ 
+
+\subsubsection{変数詳解}
+\index{key\+\_\+image.\+c@{key\+\_\+image.\+c}!K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame}}
+\index{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame}!key\+\_\+image.\+c@{key\+\_\+image.\+c}}
+\paragraph[{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame}]{\setlength{\rightskip}{0pt plus 5cm}const \+\_\+\+U\+B\+Y\+T\+E K\+E\+Y\+\_\+\+I\+M\+G\+\_\+initial\+\_\+frame\mbox{[}{\bf K\+E\+Y\+\_\+\+I\+M\+G\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+K\+E\+Y}\mbox{]}}\label{key__image_8c_aac267b2e32d4518bd2661895e8667365_aac267b2e32d4518bd2661895e8667365}
+{\bfseries 初期値\+:}
+\begin{DoxyCode}
+= \{
+    KEY_IMG_T_BLACK, KEY_IMG_T_BLACK, KEY_IMG_T_WHITE,
+    KEY_IMG_T_BLACK, KEY_IMG_T_BLACK, KEY_IMG_T_BLACK,
+    KEY\_IMG\_T\_WHITE
+\}
+\end{DoxyCode}
+
+
+1オクターブ分の\+L\+C\+D文字コード列 
+
+
+
+ key\+\_\+image.\+c の 29 行目に定義があります。
+
+
+
+参照元 main().
+
+\index{key\+\_\+image.\+c@{key\+\_\+image.\+c}!K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char}}
+\index{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char@{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char}!key\+\_\+image.\+c@{key\+\_\+image.\+c}}
+\paragraph[{K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char}]{\setlength{\rightskip}{0pt plus 5cm}const \+\_\+\+U\+B\+Y\+T\+E K\+E\+Y\+\_\+\+I\+M\+G\+\_\+char\mbox{[}$\,$\mbox{]}\mbox{[}L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+S\mbox{]}}\label{key__image_8c_a232f4f540a0f671fb2f980064795d03b_a232f4f540a0f671fb2f980064795d03b}
+{\bfseries 初期値\+:}
+\begin{DoxyCode}
+= \{
+    \{ 0x15, 0x15, 0x15, 0x15, 0x17, 0x11, 0x11, 0x1f \},
+    \{ 0x1d, 0x1d, 0x1d, 0x1d, 0x1f, 0x1f, 0x1f, 0x1f \},
+    \{ 0x17, 0x17, 0x17, 0x17, 0x17, 0x11, 0x11, 0x1f \},
+    \{ 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x1f \}
+\}
+\end{DoxyCode}
+
+
+キー画像種別分のキャラクタ画像ビットマップ 
+
+
+
+ key\+\_\+image.\+c の 35 行目に定義があります。
+
+
+
+参照元 main().
+
